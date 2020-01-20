@@ -282,8 +282,7 @@ nav a,
 /* 3.2. Top Teams
 ========================================================================== */
 
-.topPlayers,
-.topteams { 
+.topPlayers { 
   margin-bottom: 130px;
   background-color: #d8d1d14a;
  }
@@ -323,4 +322,84 @@ nav a,
 .player,
 .teams { padding: 23px 15px; }
 
-.topteams { background-color: #ffffffab; }
+.topteams { 
+  padding-bottom: 100px;
+  background-color: #ffffffab;
+  border-bottom: 2px solid #0000002e;
+}
+
+/* ==========================================================================
+   4. Footer
+   ========================================================================== */
+footer{
+  padding: 10px 0;
+  position: relative;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+}
+
+ [title=Go-to-Top] {
+  width: 4%;
+  padding: 11px 13px;
+  position: absolute;
+  left: 50%;
+  bottom: 36%;
+  color: #f8ffff;
+  font-size: 29px;
+  font-family: "fontAwesome";
+  border: 1px solid #809fbc;
+  border-radius: 0;
+  background-color: #35648e;
+  text-indent: -9999px;
+}
+ 
+[title=Go-to-Top]::before{ 
+  content: "\f077";
+  position: absolute;
+  left: 35%;
+  text-indent: 0;
+}
+
+.privacy { 
+  display: inline-block;
+  width: 30%;
+}
+
+html { scroll-behavior: smooth; }
+
+footer a,
+span { 
+  font-size: 17px;
+  color: #dcdbe8;
+}
+
+.social { 
+  float: right; 
+}
+
+.privacy li {
+  margin-left: 5%;
+}
+
+.social a {
+  text-indent: -9999px;
+  position: relative;
+}
+
+.social li { }
+
+.social a::before {
+   position: absolute;
+   left: 50%;
+   font-family: "fontAwesome";
+   text-indent: 0;
+}
+
+.facebook::before { content: '\f082'; }
+.twitter::before { content: '\f099'; }
+.google-plus::before { content: '\f0d5'; }
+.linkedin::before { content: '\f0e1'; }
+.tumblr::before { content: '\f173'; }
+.instagram::before { content: '\f16d'; }
+.youtube::before { content: '\f167'; }
+.rss::before { content: '\f09e'; }
+
