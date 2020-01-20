@@ -39,11 +39,22 @@ document.querySelector(".topToScroll").addEventListener("click",function(){
 })
 
 
-//===================== login =================
+//===================== login ================================
 var userlogin = document.querySelector(".loginform");
-document.querySelector("[title=LogIn]").addEventListener('click',function() {
-  userlogin.style.display="block";
+//pop up the login form
+document.querySelector("#login").addEventListener('click',function() {
+  userlogin.classList.add("show");
 })
+
+document.querySelector("[title=close]").addEventListener('click',function() {
+  userlogin.classList.remove("show")
+})
+
+window.addEventListener("click",(event)=>{ 
+  if (event.target===userlogin) {
+    userlogin.classList.remove("show")
+  }
+});
 
 var user = [
   {
@@ -63,16 +74,16 @@ var user = [
 function getinfo() {
   var email = document.querySelector("[name=email]").value,
   pass=document.querySelector("[name=password]").value;
+  //checks each value from user object to match the entered credentials
   for(i=0;i<user.length;i++) {
     if(email===user[i].useremail && pass===user[i].password) {
-      console.log("loggedin")
+     window.location="worldcupdetail.html";
       return
     }
   }
-  document.querySelector(".warning").innerHTML="sda"
-  console.log("no")
+ alert("Please Enter valid Email and Password")
 }
-document.querySelector(".sub").addEventListener('click',function(e){
+document.querySelector("[type=submit]").addEventListener('click',function(e){
 e.preventDefault();
 getinfo();
 })
