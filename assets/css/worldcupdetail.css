@@ -1,0 +1,21 @@
+.select {
+  padding: 70px 31px;
+  margin: 74px 0 74px 0;
+}
+
+.select h2,.select a { text-transform: uppercase; }
+
+.select h2 {
+  margin-bottom: 50px;
+  font-size: 25px;
+  color: #395387;
+}
+
+.select a {
+  width: 30%;
+  padding: 19px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: #296284;
+  color: #cfd8e2;
+}
