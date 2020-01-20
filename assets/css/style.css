@@ -277,5 +277,50 @@ nav a,
   bottom: 0;
 }
 
+.slideLeft { left: -100%; }
+
 /* 3.2. Top Teams
 ========================================================================== */
+
+.topPlayers,
+.topteams { 
+  margin-bottom: 130px;
+  background-color: #d8d1d14a;
+ }
+
+.topPlayers .wrapper,
+.topteams .wrapper {
+  padding-left: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top { 
+  width: 24.6%;
+  border-radius: 25px;
+  border: 2px solid #d0cfd469;
+}
+
+.top img {
+  border-radius: 22px 22px 0px 0px;
+}
+
+.top a {
+  color: #1b1c67;
+}
+
+.top h3 {
+  margin-bottom: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.top p {
+  color: #5f6e82a8;
+  text-align: center;
+}
+
+.player,
+.teams { padding: 23px 15px; }
+
+.topteams { background-color: #ffffffab; }
