@@ -39,6 +39,44 @@ document.querySelector(".topToScroll").addEventListener("click",function(){
 })
 
 
+//===================== login =================
+var userlogin = document.querySelector(".loginform");
+document.querySelector("[title=LogIn]").addEventListener('click',function() {
+  userlogin.style.display="block";
+})
+
+var user = [
+  {
+    useremail:"demo@gmail.com",
+    password:"1234"
+  },
+  {
+    useremail:"demo1@gmail.com",
+    password:"12345"
+  },
+  {
+  useremail:"demo2@gmail.com",
+  password:"12346"
+  }
+]
+
+function getinfo() {
+  var email = document.querySelector("[name=email]").value,
+  pass=document.querySelector("[name=password]").value;
+  for(i=0;i<user.length;i++) {
+    if(email===user[i].useremail && pass===user[i].password) {
+      console.log("loggedin")
+      return
+    }
+  }
+  document.querySelector(".warning").innerHTML="sda"
+  console.log("no")
+}
+document.querySelector(".sub").addEventListener('click',function(e){
+e.preventDefault();
+getinfo();
+})
+
 
 
 
