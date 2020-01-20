@@ -394,7 +394,11 @@ nav a,
 }
 
 [title=close] {
-
+  color: white;
+  position: absolute;
+  top: 18%;
+  right: 24%;
+  font-size: 24px;
 }
 
 ::-webkit-input-placeholder {
@@ -423,9 +427,18 @@ nav a,
 
 .warning { text-indent: -9999px; }
 
+.warn { 
+  color: r#ff0000db;
+  text-indent: 0;
+}
+
+.show { display: block; }
+.none { display: none; }
+
 /* ==========================================================================
    4. Footer
    ========================================================================== */
+
 footer{
   padding: 10px 0;
   position: relative;
@@ -504,7 +517,7 @@ span {
 @media only screen and (max-width: 995px) {
 
  
-  nav { display: none; }
+  .hide { display: none; }
   
   .hamburgericon,
   .hamburger {
