@@ -277,6 +277,27 @@ nav a,
   bottom: 0;
 }
 
+.arrow-left,
+.arrow-right { text-indent: -9999px; }
+
+.arrow-left::before,
+.arrow-right::after {
+  position: absolute;
+  top: 40%;
+  font-size: 35px;
+  text-indent: 0;
+}
+
+.arrow-left::before {
+  content: "<"; 
+  left: 1%;  
+}
+
+.arrow-right::after {
+  content: ">";
+  right: 1%;
+}
+
 .slideLeft { left: -100%; }
 
 /* 3.2. Top Teams
@@ -337,7 +358,7 @@ footer{
   background: linear-gradient(to right, #4c478a 36%, #266783 100%);
 }
 
- [title=Go-to-Top] {
+.topToScroll {
   width: 4%;
   padding: 11px 13px;
   position: absolute;
@@ -352,10 +373,10 @@ footer{
   text-indent: -9999px;
 }
  
-[title=Go-to-Top]::before{ 
+.topToScroll::before{ 
   content: "\f077";
   position: absolute;
-  left: 35%;
+  left: 23%;
   text-indent: 0;
 }
 
@@ -373,6 +394,7 @@ span {
 }
 
 .social { 
+  width: 20%;
   float: right; 
 }
 
@@ -385,7 +407,7 @@ span {
   position: relative;
 }
 
-.social li { }
+.social li { margin-left: 15%; }
 
 .social a::before {
    position: absolute;
