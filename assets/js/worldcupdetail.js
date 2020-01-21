@@ -1,4 +1,5 @@
 
+//============counter============
 $(document).ready(function(){  
 $('.counter span').each( function() {
   var $this = $(this),
