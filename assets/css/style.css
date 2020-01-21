@@ -306,6 +306,7 @@ nav a,
 }
 
 .slideLeft { left: -100%; }
+.slides img { max-height: 456px; }
 
 /* 3.2. Top Teams
 ========================================================================== */
@@ -324,6 +325,16 @@ nav a,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.topPlayers h2,
+.topteams h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 70px;
+  color: #000000bd;
 }
 
 .top { 
@@ -475,7 +486,7 @@ footer{
 html { scroll-behavior: smooth; }
 
 footer a,
-span { 
+footer span { 
   font-size: 17px;
   color: #dcdbe8;
 }
@@ -532,7 +543,7 @@ span {
 
   .hamburgericon:after, 
   .hamburgericon:before, 
-  .hamburgericon a {
+  .hamburgericon span {
     background-color: #fff;
     border-radius: 3px;
     content: '';
@@ -543,7 +554,7 @@ span {
     transition: all .2s ease-in-out;
   }
 
-  .hamburgericon a { text-indent: -9999px; }
+  .hamburgericon span { text-indent: -9999px; }
 
   .hamburger:before 
   { 
@@ -555,11 +566,67 @@ span {
     -webkit-transform: translateY(-12px) rotate(-135deg);
     transform: translateY(-12px) rotate(-135deg); 
   } 
-  .hamburger a { 
+  .hamburger span { 
     -webkit-transform: scale(0); 
     transform: scale(0);
   }
 
   [title=LogIn] { margin-top: -11px; }
+
+  .slides h2 { font-size: 35px; }
+  .bullets { bottom: 20%; }
+  .top { width: 30.6%; }
+  .topToScroll { width: 5.9%; }
+  footer a, footer span { font-size: 12px; }
+  footer span { padding-left: 7px; }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .slides h2 { font-size: 28px; }
+  .topPlayers .wrapper, 
+  .topteams .wrapper { flex-wrap: wrap; }
+
+  .top { 
+    width: 45%;
+    margin-bottom: 45px;
+   }
+
+   .privacy { 
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .social { float: unset; }
+  .topToScroll { 
+    width: 10%;
+    right: 5%;
+    left: unset;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .hamburgericon, 
+  .hamburger { width: 34px; }
+  .slides h2 { font-size: 20px; }
+  .sliderContainer { margin-bottom: 70px; }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .top { width: 100%; }
+  .topPlayers { margin-bottom: 57px; }
+  .topPlayers .wrapper,
+  .topteams .wrapper { display: block; }
+  .top img { max-height: 200px; }
+  .topToScroll { width: 15%; }
+  .topPlayers h2, 
+  .topteams h2 { font-size: 22px; }
+  .bullets { left: 38%; }
+  .login input { width: 50%; }
 
 }
