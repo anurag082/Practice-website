@@ -1,6 +1,8 @@
+header { margin-bottom: 100px; }
+
 .select {
   padding: 70px 31px;
-  margin: 74px 0 74px 0;
+  margin-bottom: 74px;
 }
 
 .select h2,.select a { text-transform: uppercase; }
@@ -18,4 +20,34 @@
   display: inline-block;
   background-color: #296284;
   color: #cfd8e2;
+} 
+
+.counter { 
+  background-color: #385387e8;
+  position: relative;
+  padding: 73px 0;
+  margin-bottom: 107px;
+ }
+
+ .counter ul { 
+   display: flex;
+   justify-content: center;
+  }
+
+ .counter li {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 12%;
+  position: relative;
+}
+
+.counter li { color: #ffffff; }
+
+.counter span { 
+  font-size: 35px;
+  margin-top: 6px;
+  margin-bottom: 22px;
+  display: block; 
 }
