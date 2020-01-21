@@ -6,8 +6,6 @@ dots = document.querySelectorAll(".dot"),
 icon = document.querySelector(".hamburgericon"),
 menu = document.querySelector("nav"),
 index=0;
-console.log(menu)
-console.log(icon)
 
 /*=============================================================
 Slider
