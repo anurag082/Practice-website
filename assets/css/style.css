@@ -384,13 +384,17 @@ nav a,
 }
 
 .login {
-  text-align: center;
+  width: 39%;
+  margin: 0 auto;
+  padding: 75px 6%;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+  border-radius: 13px;
   -webkit-transform: translate(0, 130%);
-  transform: translate(0, 130%);
+  transform: translate(0, 50%);
 }
 
 .login input {
-  width: 22%;
+  width: 100%;
   height: 38px;
   padding: 5px 5px;
   border: none;
@@ -405,11 +409,15 @@ nav a,
 }
 
 [title=close] {
+  padding: 5px 15px;
   color: white;
   position: absolute;
-  top: 18%;
-  right: 24%;
+  top: 16%;
+  right: 26%;
   font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #286384;
 }
 
 ::-webkit-input-placeholder {
@@ -586,7 +594,7 @@ footer span {
 
   .slides h2 { font-size: 28px; }
   .topPlayers .wrapper, 
-  .topteams .wrapper { flex-wrap: wrap; }
+  .topteams .wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
   .top { 
     width: 45%;
