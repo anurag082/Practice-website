@@ -4,8 +4,10 @@ slides = document.querySelector(".slider"),
 images = document.querySelectorAll(".slides"),
 dots = document.querySelectorAll(".dot"),
 icon = document.querySelector(".hamburgericon"),
-menu = document.querySelector(" nav"),
+menu = document.querySelector("nav"),
 index=0;
+console.log(menu)
+console.log(icon)
 
 /*=============================================================
 Slider
@@ -87,6 +89,22 @@ document.querySelector("[type=submit]").addEventListener('click',function(e){
 e.preventDefault();
 getinfo();
 })
+
+
+//================== Hamburger ===================
+
+icon.addEventListener("click", function() {
+  if (menu.className==="show") {
+    icon.classList.remove("hamburger");
+    icon.classList.add("hamburgericon"); 
+    menu.classList.remove("show");
+    menu.classList.add("hide");
+  } else {
+    icon.classList.add("hamburger");
+    menu.classList.remove("hide");  
+    menu.classList.add("show");
+  }
+});
 
 
 
