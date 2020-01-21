@@ -13,6 +13,6 @@ $('.counter span').each( function() {
     step: function() {
       $this.text(Math.ceil(this.countNum));			
     },
-      })
+      })  
 })
 })
