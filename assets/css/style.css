@@ -259,10 +259,7 @@ nav ul li a:before {
 /* 3.1. Slider
 ========================================================================== */
 
-.sliderContainer {
-  overflow: hidden;
-  margin-bottom: 115px;
-}
+.sliderContainer { overflow: hidden; }
 
 .sliderContainer .wrapper { 
   width: 100%;
@@ -344,11 +341,32 @@ nav ul li a:before {
 .slideLeft { left: -100%; }
 .slides img { max-height: 456px; }
 
-/* 3.2. Top Teams
+
+/* 3.2. Video 
+=============================================================*/
+
+.video-container .wrapper { width: 100%; }
+
+.video-container {
+  height: 0;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+  margin-bottom: 150px;
+}
+   
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* 3.3. Top Teams
 ========================================================================== */
 
 .topPlayers { 
   margin-bottom: 130px;
+  padding-bottom: 70px;
   background-color: #d8d1d14a;
  }
 
@@ -363,8 +381,8 @@ nav ul li a:before {
   justify-content: space-between;
 }
 
-.topPlayers h2,
-.topteams h2 {
+
+ h2 {
   text-transform: uppercase;
   text-align: center;
   font-size: 30px;
@@ -406,8 +424,46 @@ nav ul li a:before {
   background-color: #ffffffab;
   border-bottom: 2px solid #0000002e;
 }
+/* 3.4. Recent News
+========================================================================== */
 
-/* 3.3. Login Form
+.news { margin-bottom: 130px; }
+
+.recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.recent h3 {
+  padding: 15px 11px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #000000f2;
+}
+
+.recent figure {
+  position: relative;;
+}
+
+.recent article {
+  width: 25%;
+}
+
+.recent figcaption {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #0000009e;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/* 3.5. Login Form
 ========================================================================== */
 
 .loginform {
