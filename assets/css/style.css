@@ -259,10 +259,10 @@ nav ul li a:before {
 /* 3.1. Slider
 ========================================================================== */
 
-.sliderContainer { overflow: hidden; }
 
 .sliderContainer .wrapper { 
   width: 100%;
+  overflow: hidden;
   position: relative; 
 }
 
@@ -345,9 +345,9 @@ nav ul li a:before {
 /* 3.2. Video 
 =============================================================*/
 
-.video-container .wrapper { width: 100%; }
 
-.video-container {
+.video-container .wrapper {
+  width: 100%;
   height: 0;
   padding-bottom: 56.25%;
   padding-top: 30px;
@@ -671,8 +671,20 @@ footer span {
     transform: scale(0);
   }
 
+  nav {
+    z-index: 1;
+    width: 100%; 
+    position: absolute;
+    top: 9%; 
+    left: 0;
+    background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+  }
+  
+  nav ul,
+  nav li { display: block; }
+  nav ul { text-align: center; }
+  nav li { padding: 16px 0px; }
   [title=LogIn] { margin-top: -11px; }
-
   .slides h2 { font-size: 35px; }
   .bullets { bottom: 20%; }
   .top { width: 30.6%; }
@@ -684,9 +696,14 @@ footer span {
 
 @media only screen and (max-width: 768px) {
 
-  .slides h2 { font-size: 28px; }
+  .slides h2,
+  .recent h2 { font-size: 28px; }
   .topPlayers .wrapper, 
-  .topteams .wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .topteams .wrapper,
+  .recent { 
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap; 
+  }
 
   .top { 
     width: 45%;
@@ -704,6 +721,12 @@ footer span {
     right: 5%;
     left: unset;
   }
+
+  
+  .recent article {
+    width: 48.5%;
+    margin-bottom: 40px;
+  }
   
   .login { width: 60%; }
 }
@@ -720,14 +743,15 @@ footer span {
     height: 15px;
   }
 
-  .top { width: 100%; }
+  .top,
+  .recent article { width: 100%; }
   .topPlayers { margin-bottom: 57px; }
   .topPlayers .wrapper,
-  .topteams .wrapper { display: block; }
+  .topteams .wrapper,
+  .recent { display: block; }
   .top img { max-height: 200px; }
   .topToScroll { width: 15%; }
-  .topPlayers h2, 
-  .topteams h2 { font-size: 22px; }
+  h2 { font-size: 22px; }
   .bullets { left: 38%; }
   .login input { width: 100%; }
   .login { width: 80%; }
