@@ -1,0 +1,41 @@
+
+header { margin-bottom: 60px; }
+
+.match h2 {
+  padding: 15px 12px;
+  margin:0;
+  font-size: 26px;
+  text-align: left;
+}
+
+.match { margin-bottom: 100px; }
+
+.match span { 
+  color: #2d5b85;
+  font-size: 35px;  
+}
+.matchdetail li { 
+  padding: 10px 12px;
+  display: block;
+}
+
+.matchdetail a,
+.matchdetail li {
+  font-size: 17px;
+  color: #040303e0;
+}
+
+.awaystatistics { border-right: 2px solid #1d181830; }
+
+.matchdetail a { text-decoration: underline; }
+.matchdetail .home-statistics,
+.matchdetail .homestatistics,
+.matchdetail .awaystatistics { 
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  border-top: 2px solid #1d181830;
+  border-left: 2px solid #1d181830;
+  border-bottom: 2px solid #1d181830;
+}
+
