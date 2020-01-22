@@ -178,6 +178,7 @@ body {font-family: sans-serif;}
 .first-letter:first-letter { text-transform: uppercase; }
 
 
+
 /* ==========================================================================
    2. Header
    ========================================================================== */
@@ -249,6 +250,7 @@ nav a:hover:after {
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
@@ -325,16 +327,18 @@ nav ul li a:before {
   position: absolute;
   top: 40%;
   font-size: 35px;
+  font-family: "fontAwesome";
   text-indent: 0;
+  color: #4185b9
 }
 
 .arrow-left::before {
-  content: "<"; 
+  content: "\f053"; 
   left: 1%;  
 }
 
 .arrow-right::after {
-  content: ">";
+  content: "\f054";
   right: 1%;
 }
 
@@ -397,12 +401,15 @@ nav ul li a:before {
   border: 2px solid #d0cfd469;
 }
 
-.top img {
-  border-radius: 22px 22px 0px 0px;
-}
+.top img { border-radius: 22px 22px 0px 0px; }
+.top a:hover,
+.recent a:hover { color: #266783; }
 
 .top a {
-  color: #1b1c67;
+  color: #27272bfa;
+  font-size: 17px;
+  -webkit-transition: color 1.5s;
+  transition: color 1.5s;
 }
 
 .top h3 {
@@ -438,11 +445,13 @@ nav ul li a:before {
   justify-content: space-between;
 }
 
-.recent h3 {
-  padding: 15px 11px;
+.recent a {
+  padding: 7px 11px;
   font-weight: bold;
   font-size: 17px;
   color: #000000f2;
+  -webkit-transition: color 1.5s;
+  transition: color 1.5s;
 }
 
 .recent figure {
@@ -483,7 +492,19 @@ nav ul li a:before {
   border-radius: 13px;
   -webkit-transform: translate(0, 130%);
   transform: translate(0, 50%);
+  -webkit-animation: popup 1s ease-in-out;
+  animation: popup 1s ease-in-out;
 }
+
+@-webkit-keyframes popup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes popup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 
 .login input {
   width: 100%;
@@ -629,6 +650,17 @@ footer span {
 
  
   .hide { display: none; }
+
+  h1 {
+    width: 100%;
+    max-width: 114px;
+  }
+
+  [title=LogIn] {
+    display: inline-block;
+    float: unset;
+    background-color: #3e3a7be3;
+  }
   
   .hamburgericon,
   .hamburger {
@@ -636,8 +668,8 @@ footer span {
     width: 5%;
     display: block;
     position: absolute;
-    top: -7px;
-    left: 15%;
+    top: 0;
+    right: 0;
     cursor: pointer;
   }
 
@@ -682,10 +714,10 @@ footer span {
 
   nav a:hover:after {
     opacity: 0; 
-    visibility: hidden;
-   
+    visibility: hidden; 
   }
-  
+  .top a:hover,
+.recent a:hover { color: unset; }
   nav ul,
   nav li { display: block; }
   nav ul { text-align: center; }
