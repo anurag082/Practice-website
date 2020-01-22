@@ -679,6 +679,12 @@ footer span {
     left: 0;
     background: linear-gradient(to right, #4c478a 36%, #266783 100%);
   }
+
+  nav a:hover:after {
+    opacity: 0; 
+    visibility: hidden;
+   
+  }
   
   nav ul,
   nav li { display: block; }
