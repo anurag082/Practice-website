@@ -2,7 +2,7 @@
   margin-bottom: 60px;
   padding-top: 70px;
   padding-bottom: 70px;
-  /* background-image: url("https://via.placeholder.com/1351x1000/?text=Fifa World Cup"); */
+  background-image: url("https://via.placeholder.com/1351x3000/?text=Fifa World Cup");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -29,8 +29,8 @@ th {
   color: white;
 }
 
-tr:nth-child(even){background-color: #2a91e03d;}
-tr:nth-child(odd){background-color: #34628a69;}
+td:nth-child(even){ background: linear-gradient(to right, #4c478a 36%, #266783 100%); }
+td:nth-child(odd){ background: linear-gradient(to right, #4c478a 36%, #266783 100%); }
 td:hover {background-color: #ddd;}
 
 td,
@@ -54,7 +54,7 @@ th {
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc; }
+	tr { border: 1.5px solid #ccc; }
 	
 	td { 
 		border: none;
