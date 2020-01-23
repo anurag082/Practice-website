@@ -7,9 +7,30 @@ icon = document.querySelector(".hamburgericon"),
 menu = document.querySelector("nav"),
 index=0;
 
+//================== Hamburger ===================
+
+icon.addEventListener("click", function() {
+  if (menu.className==="show") {
+    icon.classList.remove("hamburger");
+    icon.classList.add("hamburgericon"); 
+    menu.classList.remove("show");
+    menu.classList.add("hide");
+  } else {
+    icon.classList.add("hamburger");
+    menu.classList.remove("hide");  
+    menu.classList.add("show");
+  }
+});
+
+
+//=========================== Scroll to top =======================
+document.querySelector(".topToScroll").addEventListener("click",function(){
+  document.documentElement.scrollTop = 0;
+})
+
 /*=============================================================
 Slider
-=============================================*/
+===============================================================*/
 
 dots.forEach(function(item,index)
 {
@@ -32,30 +53,21 @@ function sliding(n)
   slides.style.transform = 'translateX(' + n * -100 + '%)'; 
 }
 
-
-//=========================== Scroll to top =======================
-document.querySelector(".topToScroll").addEventListener("click",function(){
-  document.documentElement.scrollTop = 0;
-})
-
-
 //===================== login ================================
+
 var userlogin = document.querySelector(".loginform");
 //pop up the login form
 document.querySelector("#login").addEventListener('click',function() {
   userlogin.classList.add("show");
 })
-
 document.querySelector("[title=close]").addEventListener('click',function() {
   userlogin.classList.remove("show")
 })
-
 window.addEventListener("click",(event)=>{ 
   if (event.target===userlogin) {
     userlogin.classList.remove("show")
   }
 });
-
 var user = [
   {
     useremail:"demo@gmail.com",
@@ -70,7 +82,6 @@ var user = [
   password:"12346"
   }
 ]
-
 function getinfo() {
   var email = document.querySelector("[name=email]").value,
   pass=document.querySelector("[name=password]").value;
@@ -89,20 +100,7 @@ getinfo();
 })
 
 
-//================== Hamburger ===================
 
-icon.addEventListener("click", function() {
-  if (menu.className==="show") {
-    icon.classList.remove("hamburger");
-    icon.classList.add("hamburgericon"); 
-    menu.classList.remove("show");
-    menu.classList.add("hide");
-  } else {
-    icon.classList.add("hamburger");
-    menu.classList.remove("hide");  
-    menu.classList.add("show");
-  }
-});
 
 
 
