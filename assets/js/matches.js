@@ -11,7 +11,7 @@ fetch('https://worldcup.sfg.io/matches')
 function appendData(data) {
 var match =document.querySelector(".match .wrapper")         
 refereeNames=0;           
-for(var j=0;j<2;j++) { // this loops creates a section which contains h2(team1 vs team 2) and ul(match detail)
+for(var j=0;j<10;j++) { // this loops creates a section which contains h2(team1 vs team 2) and ul(match detail)
 // Creating Section element
 var data_container = document.createElement("section");
 data_container.setAttribute("class","match-deatils");
@@ -93,3 +93,12 @@ datacontainer[j].appendChild(awaystatistics);
 refereeNames=0;             
 }
 }
+
+//========== Accordian================
+$(function() {  
+  $(document).on('click', 'h2', function(e) {
+     e.preventDefault();
+    $(".matchdetail").slideUp(1000), $(this).next().is(":visible") || $(this).next().slideDown(1000),
+    e.stopPropagation()      
+   });
+});
