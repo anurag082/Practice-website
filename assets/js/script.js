@@ -22,7 +22,6 @@ icon.addEventListener("click", function() {
   }
 });
 
-
 //=========================== Scroll to top =======================
 document.querySelector(".topToScroll").addEventListener("click",function(){
   document.documentElement.scrollTop = 0;
