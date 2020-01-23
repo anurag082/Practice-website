@@ -3,15 +3,26 @@ header { margin-bottom: 60px; }
 
 .match h2 {
   padding: 15px 12px;
-  margin:0;
+  margin: 0;
+  background: linear-gradient(to right, #4c478a 59%, #266783 100%);
+  cursor: pointer;
+  color: #ffffffb3;
   font-size: 26px;
   text-align: left;
 }
 
+.match ul { 
+  display: none;
+  padding: 12px 10px;
+  background-color: #faebd766;
+}
+
+.match section:first-child ul { display: block; }
 .match { margin-bottom: 100px; }
+.match section { border-bottom: 2px solid #ffecec45; }
 
 .match span { 
-  color: #2d5b85;
+  color: #5191cc;
   font-size: 35px;  
 }
 .matchdetail li { 
@@ -39,3 +50,18 @@ header { margin-bottom: 60px; }
   border-bottom: 2px solid #1d181830;
 }
 
+@media only screen and (max-width: 768px) {
+
+  .matchdetail a, .matchdetail li { font-size: 15px; }
+  .match h2,
+  .match span { font-size: 22px; }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .homestatistics { border-right: 2px solid #1d181830; }
+  .matchdetail .home-statistics,
+  .matchdetail .homestatistics,
+  .matchdetail .awaystatistics { margin-bottom: 30px; }
+  .match h2, .match span { font-size: 18px; }
+}
