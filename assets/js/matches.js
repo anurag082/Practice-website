@@ -46,7 +46,7 @@ var team_name = document.createElement("a");
 var teamName = document.querySelectorAll(".teamName");
 teamName[j].appendChild(team_name);
 team_name.innerHTML = "Hoisting Team :" + " "  + data[j].home_team_country;
-team_name.setAttribute("href","teamsinfo.html");
+team_name.setAttribute("href","teamDetails.html");
 team_name.setAttribute("target","_blank");
 team_name.setAttribute("title",data[j].home_team_country);
 //====================Date & Time======================================
