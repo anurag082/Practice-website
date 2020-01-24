@@ -1,14 +1,25 @@
-fetch('https://worldcup.sfg.io/matches')
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
-  appendData(data);
-})
-.catch(function (err) {
-  console.log('error: ' + err);
-});
-
+function loadJSON() {
+  var data_file = "https://worldcup.sfg.io/matches";
+  var http_request = new XMLHttpRequest();
+  try {
+     // Opera 8.0+, Firefox, Chrome, Safari
+    http_request = new XMLHttpRequest();
+  } catch (e) {
+      // Something went wrong
+      alert("Your browser broke!");
+      return false;        
+     }
+  http_request.onreadystatechange = function() {
+     if (http_request.readyState == 4  ) {
+      // Javascript function JSON.parse to parse JSON data
+      var data = JSON.parse(http_request.responseText);
+      appendData(data)
+     }
+  }
+  http_request.open("GET", data_file, true);
+  http_request.send();
+}
+loadJSON(); 
 function appendData(data) {
   var tablecontainer = document.querySelector(".tablecontainer"),
   player=0,
