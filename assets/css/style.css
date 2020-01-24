@@ -193,7 +193,6 @@ header {
 
 .hamburgericon { display: none; }
 h1 { width: 9.4%; }
-nav { width: 36%; }
 h1,nav { display: inline-block; }
 
 nav ul {
@@ -320,7 +319,10 @@ nav ul li a:before {
 }
 
 .arrow-left,
-.arrow-right { text-indent: -9999px; }
+.arrow-right { 
+  display: inline-block;
+  text-indent: -9999px;
+}
 
 .arrow-left::before,
 .arrow-right::after {
@@ -351,14 +353,13 @@ nav ul li a:before {
 
 
 .video-container .wrapper,video { width: 100%; }
-.video-container .wrapper { margin-bottom: 150px;   }
+.video-container .wrapper { margin-bottom: 80px;   }
    
 /* 3.3. Top Teams
 ========================================================================== */
 
 .topPlayers { 
-  margin-bottom: 130px;
-  padding-bottom: 70px;
+  margin-bottom: 50px;
   background-color: #fbf9f9;
  }
 
@@ -415,14 +416,13 @@ nav ul li a:before {
 .teams { padding: 23px 15px; }
 
 .topteams { 
-  padding-bottom: 100px;
+  margin-bottom: 80px;
   background-color: #ffffffab;
-  border-bottom: 2px solid #0000002e;
 }
 /* 3.4. Recent News
 ========================================================================== */
 
-.news { margin-bottom: 130px; }
+.news { margin-bottom: 80px; }
 
 .recent {
   display: -webkit-box;
@@ -434,7 +434,6 @@ nav ul li a:before {
 }
 
 .recent a {
-  padding: 7px 11px;
   font-weight: bold;
   font-size: 17px;
   color: #000000f2;
@@ -442,13 +441,9 @@ nav ul li a:before {
   transition: color 1.5s;
 }
 
-.recent figure {
-  position: relative;;
-}
-
-.recent article {
-  width: 25%;
-}
+.recent figure { position: relative; }
+.recent h3 { padding: 7px 11px; }
+.recent article { width: 25%; }
 
 .recent figcaption {
   position: absolute;
@@ -589,7 +584,7 @@ footer{
 
 .privacy { 
   display: inline-block;
-  width: 30%;
+  width: 39%;
 }
 
 html { scroll-behavior: smooth; }
@@ -602,11 +597,22 @@ footer span {
 
 .social { 
   width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  float: right;
   float: right; 
 }
 
-.privacy li {
-  margin-left: 5%;
+.privacy li { margin-left: 5%; }
+.news { margin-bottom: 50px; }
+
+.social a,
+.privacy a {
+  -webkit-transition: 0.5s opacity; 
+  transition: 0.5s opacity; 
 }
 
 .social a {
@@ -614,13 +620,14 @@ footer span {
   position: relative;
 }
 
-.social li { margin-left: 15%; }
+.social a:hover,
+.privacy a:hover { opacity: 0.7; }
 
 .social a::before {
-   position: absolute;
-   left: 50%;
-   font-family: "fontAwesome";
-   text-indent: 0;
+  position: absolute;
+  left: 50%;
+  font-family: "fontAwesome";
+  text-indent: 0;
 }
 
 .facebook::before { content: '\f082'; }
@@ -676,8 +683,7 @@ footer span {
 
   .hamburgericon span { text-indent: -9999px; }
 
-  .hamburger:before 
-  { 
+  .hamburger:before { 
     -webkit-transform: translateY(12px) rotate(135deg); 
     transform: translateY(12px) rotate(135deg); 
   } 
@@ -692,18 +698,19 @@ footer span {
   }
 
   nav {
-    z-index: 1;
-    width: 100%; 
-    position: absolute;
-    top: 9%; 
-    left: 0;
-    background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+  z-index: 1;
+  width: 100%; 
+  position: absolute;
+  top: 9%; 
+  left: 0;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
   }
 
   nav a:hover:after {
     opacity: 0; 
     visibility: hidden; 
   }
+
   .top a:hover,
 .recent a:hover { color: unset; }
   nav ul,
@@ -717,6 +724,8 @@ footer span {
   .topToScroll { width: 5.9%; }
   footer a, footer span { font-size: 12px; }
   footer span { padding-left: 7px; }
+  .social a:hover,
+.privacy a:hover { opacity: unset; }
 
 }
 
@@ -762,7 +771,9 @@ footer span {
   .hamburgericon, 
   .hamburger { width: 34px; }
   .slides h2 { font-size: 20px; }
-  .sliderContainer { margin-bottom: 70px; }
+  .sliderContainer,
+  .video-container .wrapper,
+  h2 { margin-bottom: 30px; }
 
   .dot {
     width: 15px;
