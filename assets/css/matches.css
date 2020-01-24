@@ -11,6 +11,7 @@ header { margin-bottom: 60px; }
  
 /* 2.1. Match Section
 ========================================================================== */
+
 .match h2 {
   padding: 15px 12px;
   margin: 0;
@@ -47,8 +48,9 @@ header { margin-bottom: 60px; }
 }
 
 .awaystatistics { border-right: 2px solid #1d181830; }
-
+.teamName a { color: #305a86; }
 .matchdetail a { text-decoration: underline; }
+
 .matchdetail .home-statistics,
 .matchdetail .homestatistics,
 .matchdetail .awaystatistics { 
