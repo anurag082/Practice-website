@@ -236,7 +236,7 @@ nav a:after {
   background: #0000009c;
   content: '.';
   color: transparent; 
-  visibility: none;
+  visibility: unset;
   opacity: 0;
 }
 
@@ -267,9 +267,7 @@ nav ul li a:before {
   position: relative; 
 }
 
-.slider { 
-  display: -webkit-box; 
-  display: -ms-flexbox; 
+.slider {  
   display: flex;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
@@ -389,7 +387,7 @@ nav ul li a:before {
 
 .top img { border-radius: 22px 22px 0px 0px; }
 .top a:hover,
-.recent a:hover { color: #266783; }
+.news a:hover { color: #266783; }
 
 .top a {
   color: #27272bfa;
