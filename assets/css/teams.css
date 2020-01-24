@@ -22,8 +22,10 @@ header,
 
 .tablecontainer td,
 .tablecontainer th {
+  color: #1d1717cc;
   border: 1px solid #ddd;
   padding: 8px;
+  font-size: 15px;
 }
 
 .participatingTeams th {
