@@ -19,14 +19,13 @@
   margin: 0 auto;
 }
 
-th { 
-  text-transform: uppercase;
-  text-align: left;
+th {  
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #3b5288;
-  color: white;
+	color: white;
+	text-transform: uppercase;
+  text-align: left;
 }
 
 td:nth-child(even){ background: linear-gradient(to right, #4c478a 36%, #266783 100%); }
@@ -35,40 +34,40 @@ td:hover {background-color: #ddd;}
 
 td,
 th {
-  color: #ffffffc2;
-  border: 1px solid #ddd;
-  padding: 8px;
+	padding: 8px;
+	border: 1px solid #ddd;
+  color: #ffffffc2; 
 }
 
 @media only screen and (max-width: 768px) {
 
   .playerDetails { width: 100%; }
-
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
+	table, tbody, th, td, tr { display: block; }
+	tr { border: 1.5px solid #ccc; }
+	.team-details h2 { width: 100%; }
 	
 	.playerDetails tr:first-child { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	
-	tr { border: 1.5px solid #ccc; }
-	
+		
 	td { 
+		padding-left: 50%;
+		position: relative; 
 		border: none;
 		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
+		font-size: 16px;	
 	}
 	
 	td:before { 
+		width: 45%; 
+		padding-right: 10px; 
 		position: absolute;
 		top: 6px;
 		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
+		font-size: 18px;
+		font-weight: bold;
 		white-space: nowrap;
   }
 
