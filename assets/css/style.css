@@ -178,6 +178,15 @@ body {font-family: sans-serif;}
 .first-letter:first-letter { text-transform: uppercase; }
 
 
+h2 {
+  margin-bottom: 70px;
+  color: #000000bd;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 
 /* ==========================================================================
    2. Header
@@ -367,16 +376,6 @@ nav ul li a:before {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-
- h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 70px;
-  color: #000000bd;
 }
 
 .top { 
@@ -624,7 +623,6 @@ footer span {
 .instagram::before { content: '\f16d'; }
 .youtube::before { content: '\f167'; }
 .rss::before { content: '\f09e'; }
-
 
 
 @media only screen and (max-width: 995px) {
