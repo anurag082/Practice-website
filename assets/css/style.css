@@ -689,7 +689,7 @@ footer span {
   z-index: 1;
   width: 100%; 
   position: absolute;
-  top: 9%; 
+  top: 80px; 
   left: 0;
   background: linear-gradient(to right, #4c478a 36%, #266783 100%);
   }
