@@ -1,5 +1,11 @@
-# FifaWorldCup
+This a simple demo website that includes the below-mentioned functionality using HTML5, CSS3 and JS for practice:
 
+-  Slideshow Gallery
+-   
+
+
+
+# use the below values to test the login 
 for login :
 
 {
