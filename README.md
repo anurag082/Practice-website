@@ -4,7 +4,7 @@
 -  Modal Box
 -  Counter
 
-To see the website in action: https://anurag082.github.io/fifa2020/
+To see the website in action: https://anurag082.github.io/Practice-website
 
 
 # use the below values to test the login 
